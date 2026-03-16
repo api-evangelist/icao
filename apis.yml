@@ -1,0 +1,47 @@
+aid: icao
+name: ICAO
+description: >-
+  The International Civil Aviation Organization (ICAO) is a specialized agency
+  of the United Nations that codifies the principles and techniques of
+  international air navigation and fosters the planning and development of
+  international air transport. ICAO provides data services and digital
+  standards for the global aviation community.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Aviation
+  - Airlines
+  - Airports
+  - Standards
+  - United Nations
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/icao/refs/heads/main/apis.yml
+created: '2026-03-16'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+apis:
+  - aid: icao:icao-api
+    name: ICAO API
+    description: >-
+      ICAO provides digital data services and APIs for aviation data including
+      airport information, NOTAM data, airspace information, and safety-related
+      aviation standards and documentation.
+    humanURL: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+    tags:
+      - Aviation
+      - Airports
+      - NOTAM
+      - Airspace
+    properties:
+      - type: Documentation
+        url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+common:
+  - type: Website
+    url: https://www.icao.int/
+  - type: Documentation
+    url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+  - type: Support
+    url: https://www.icao.int/contact/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
