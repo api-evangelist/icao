@@ -9,9 +9,9 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Aviation
   - Airlines
   - Airports
+  - Aviation
   - Standards
   - United Nations
 url: >-
@@ -28,10 +28,10 @@ apis:
       aviation standards and documentation.
     humanURL: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
     tags:
-      - Aviation
       - Airports
-      - NOTAM
       - Airspace
+      - Aviation
+      - NOTAM
     properties:
       - type: Documentation
         url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
