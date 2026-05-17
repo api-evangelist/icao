@@ -44,7 +44,7 @@ apis:
         url: https://applications.icao.int/dataservices/default.aspx
       - type: Samples
         url: https://applications.icao.int/dataservices/api-data-samples
-      - type: Terms of Service
+      - type: TermsOfService
         url: https://www.icao.int/sites/default/files/Aviation-API-Data-Service/Documents/User-Terms-and-Condtions-for-ICAO-API-Data-Service-APIs-LEB_FINAL_13.04.21.pdf
   - aid: icao:icao-states-api
     name: ICAO States API
@@ -139,7 +139,7 @@ common:
     url: https://applications.icao.int/dataservices/api-data-samples
   - type: Pricing
     url: https://store.icao.int/en/aviation-api-data-service
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.icao.int/sites/default/files/Aviation-API-Data-Service/Documents/User-Terms-and-Condtions-for-ICAO-API-Data-Service-APIs-LEB_FINAL_13.04.21.pdf
   - type: Support
     url: https://www.icao.int/contact/
