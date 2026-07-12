@@ -129,6 +129,8 @@ apis:
       - type: Documentation
         url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
 common:
+  - type: DomainSecurity
+    url: security/icao-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/icao
   - type: Website
