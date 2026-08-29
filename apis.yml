@@ -65,7 +65,7 @@ apis:
         url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
       - type: Portal
         url: https://applications.icao.int/dataservices/default.aspx
-      - type: Samples
+      - type: Examples
         url: https://applications.icao.int/dataservices/api-data-samples
       - type: TermsOfService
         url: https://www.icao.int/sites/default/files/Aviation-API-Data-Service/Documents/User-Terms-and-Condtions-for-ICAO-API-Data-Service-APIs-LEB_FINAL_13.04.21.pdf
@@ -162,7 +162,7 @@ common:
     url: https://applications.icao.int/dataservices/default.aspx
   - type: Documentation
     url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
-  - type: Samples
+  - type: Examples
     url: https://applications.icao.int/dataservices/api-data-samples
   - type: Pricing
     url: https://store.icao.int/en/aviation-api-data-service
