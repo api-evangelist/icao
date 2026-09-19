@@ -105,6 +105,10 @@ apis:
     humanURL: https://applications.icao.int/dataservices/default.aspx
     tags:
       - DOC8585
+      - Operator
+      - Reference Data
+    tags_raw:
+      - DOC8585
       - Operators
       - Reference Data
     properties:
