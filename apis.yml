@@ -45,7 +45,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/icao/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-04-28'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
   - aid: icao:icao-api-data-service
@@ -156,6 +156,8 @@ apis:
       - type: Documentation
         url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
 common:
+  - url: https://www.icao.int/news
+    type: Blog
   - type: DomainSecurity
     url: security/icao-domain-security.yml
   - type: LinkedIn
