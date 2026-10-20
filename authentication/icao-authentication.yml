@@ -1,0 +1,24 @@
+generated: '2026-10-20'
+method: derived
+source: openapi/icao-openapi.yml
+summary:
+  types:
+  - apiKey
+  - http
+  api_key_in:
+  - query
+schemes:
+- name: apiKeyAuth
+  type: apiKey
+  in: query
+  parameter: api_key
+  description: Pass api key in URL query parameter.
+  sources:
+  - openapi/icao-openapi.yml
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  bearerFormat: api_key
+  description: Pass api key as Bearer token.
+  sources:
+  - openapi/icao-openapi.yml

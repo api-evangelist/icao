@@ -1,14 +1,11 @@
 aid: icao
 name: ICAO
-description: >-
-  The International Civil Aviation Organization (ICAO) is a specialized agency
-  of the United Nations that codifies the principles and techniques of
-  international air navigation and fosters the planning and development of
-  international air transport. ICAO's API Data Service provides 50+
-  continuously updated APIs covering states, airports, operators, airspace,
-  occurrences, and aircraft, including official reference datasets such as
-  DOC7910 location indicators, DOC8585 operator three-letter codes, and
-  DOC8643 aircraft type designators.
+description: The International Civil Aviation Organization (ICAO) is a specialized agency of the United
+  Nations that codifies the principles and techniques of international air navigation and fosters the
+  planning and development of international air transport. ICAO's API Data Service provides 50+ continuously
+  updated APIs covering states, airports, operators, airspace, occurrences, and aircraft, including official
+  reference datasets such as DOC7910 location indicators, DOC8585 operator three-letter codes, and DOC8643
+  aircraft type designators.
 type: Index
 deliveryModel:
   model: saas
@@ -35,153 +32,265 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/icao.png
 tags:
-  - Airlines
-  - Airports
-  - Airspace
-  - Aviation
-  - Reference Data
-  - Standards
-  - United Nations
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/icao/refs/heads/main/apis.yml
+- Airlines
+- Airports
+- Airspace
+- Aviation
+- Reference Data
+- Standards
+- United Nations
+url: https://raw.githubusercontent.com/api-evangelist/icao/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-10-06'
+modified: '2026-10-20'
 specificationVersion: '0.23'
-apis:
-  - aid: icao:icao-api-data-service
-    name: ICAO API Data Service
-    description: >-
-      The ICAO API Data Service provides programmatic access to authoritative
-      civil aviation data published by ICAO, with continuously updated
-      endpoints across six data areas. An API key is required and responses
-      are available in CSV and JSON formats; pricing tiers include booster
-      packs, full data-set packages, and unlimited-call subscriptions.
-    humanURL: https://applications.icao.int/dataservices/default.aspx
-    tags:
-      - Aviation Data
-      - Reference Data
-    properties:
-      - type: Documentation
-        url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
-      - type: Portal
-        url: https://applications.icao.int/dataservices/default.aspx
-      - type: Examples
-        url: https://applications.icao.int/dataservices/api-data-samples
-      - type: TermsOfService
-        url: https://www.icao.int/sites/default/files/Aviation-API-Data-Service/Documents/User-Terms-and-Condtions-for-ICAO-API-Data-Service-APIs-LEB_FINAL_13.04.21.pdf
-  - aid: icao:icao-states-api
-    name: ICAO States API
-    description: >-
-      Endpoints providing reference and statistical data on ICAO Member
-      States, including state-level aviation activity, agreements, and
-      contracting state metadata.
-    humanURL: https://applications.icao.int/dataservices/default.aspx
-    tags:
-      - States
-      - Reference Data
-    properties:
-      - type: Documentation
-        url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
-  - aid: icao:icao-airports-api
-    name: ICAO Airports API
-    description: >-
-      Endpoints exposing ICAO airport reference data including DOC7910
-      location indicators, airport metadata, and related aerodrome
-      information.
-    humanURL: https://applications.icao.int/dataservices/default.aspx
-    tags:
-      - Airports
-      - DOC7910
-      - Reference Data
-    properties:
-      - type: Documentation
-        url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
-  - aid: icao:icao-operators-api
-    name: ICAO Operators API
-    description: >-
-      Endpoints providing operator reference data including DOC8585
-      three-letter operator designators, telephony, and operator details
-      for airlines and aircraft operators.
-    humanURL: https://applications.icao.int/dataservices/default.aspx
-    tags:
-      - DOC8585
-      - Operator
-      - Reference Data
-    tags_raw:
-      - DOC8585
-      - Operators
-      - Reference Data
-    properties:
-      - type: Documentation
-        url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
-  - aid: icao:icao-airspace-api
-    name: ICAO Airspace API
-    description: >-
-      Endpoints providing airspace, navigation, and route data including
-      flight information regions and airspace structures relevant to
-      international air navigation.
-    humanURL: https://applications.icao.int/dataservices/default.aspx
-    tags:
-      - Airspace
-      - Navigation
-    properties:
-      - type: Documentation
-        url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
-  - aid: icao:icao-occurrences-api
-    name: ICAO Occurrences API
-    description: >-
-      Endpoints providing access to aviation safety occurrence data,
-      including accident and incident records reported through ICAO's
-      safety information systems.
-    humanURL: https://applications.icao.int/dataservices/default.aspx
-    tags:
-      - Accidents
-      - Incidents
-      - Safety
-    properties:
-      - type: Documentation
-        url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
-  - aid: icao:icao-aircraft-api
-    name: ICAO Aircraft API
-    description: >-
-      Endpoints providing aircraft reference data including DOC8643
-      aircraft type designators, manufacturer information, and aircraft
-      performance categories.
-    humanURL: https://applications.icao.int/dataservices/default.aspx
-    tags:
-      - Aircraft
-      - DOC8643
-      - Reference Data
-    properties:
-      - type: Documentation
-        url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
 common:
-  - type: Plans
-    url: plans/icao-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/icao-rate-limits.yml
-  - type: FinOps
-    url: finops/icao-finops.yml
-  - url: https://www.icao.int/news
-    type: Blog
-  - type: DomainSecurity
-    url: security/icao-domain-security.yml
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/icao
-  - type: Website
-    url: https://www.icao.int/
-  - type: Portal
-    url: https://applications.icao.int/dataservices/default.aspx
+- type: AgenticAccess
+  url: agentic-access/icao-agentic-access.yml
+- type: Spectral
+  url: rules/icao-rules.yml
+- type: Vocabulary
+  url: vocabulary/icao-vocabulary.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Conventions
+  url: conventions/icao-conventions.yml
+- type: Conformance
+  url: conformance/icao-conformance.yml
+- type: Hosts
+  url: hosts/icao-hosts.yml
+- type: Vendors
+  url: vendors/icao-vendors.yml
+- type: Packages
+  url: packages/icao-packages.yml
+- type: Authentication
+  url: authentication/icao-authentication.yml
+- type: Plans
+  url: plans/icao-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/icao-rate-limits.yml
+- type: FinOps
+  url: finops/icao-finops.yml
+- url: https://www.icao.int/news
+  type: Blog
+- type: DomainSecurity
+  url: security/icao-domain-security.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/icao
+- type: Website
+  url: https://www.icao.int/
+- type: Portal
+  url: https://applications.icao.int/dataservices/default.aspx
+- type: Documentation
+  url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+- type: TermsOfService
+  url: https://unitingaviation.com/wp-content/uploads/2021/09/User-Terms-and-Condtions-for-ICAO-API-Data-Service-APIs-LEB_FINAL_13.04.21.pdf
+- type: Support
+  url: https://www.icao.int/contact/
+- type: Portal
+  url: https://dataservices.icao.int/
+apis:
+- aid: icao:icao-states-api
+  name: ICAO States API
+  description: >-
+    Endpoints providing reference and statistical data on ICAO Member States, including state-level aviation
+    activity, agreements, and contracting state metadata.
+  humanURL: https://applications.icao.int/dataservices/default.aspx
+  tags:
+  - States
+  - Reference Data
+  properties:
   - type: Documentation
     url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
-  - type: Examples
-    url: https://applications.icao.int/dataservices/api-data-samples
-  - type: Pricing
-    url: https://store.icao.int/en/aviation-api-data-service
+- aid: icao:icao-airports-api
+  name: ICAO Airports API
+  description: >-
+    Endpoints exposing ICAO airport reference data including DOC7910 location indicators, airport metadata,
+    and related aerodrome information.
+  humanURL: https://applications.icao.int/dataservices/default.aspx
+  tags:
+  - Airports
+  - DOC7910
+  - Reference Data
+  properties:
+  - type: Documentation
+    url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+- aid: icao:icao-operators-api
+  name: ICAO Operators API
+  description: >-
+    Endpoints providing operator reference data including DOC8585 three-letter operator designators, telephony,
+    and operator details for airlines and aircraft operators.
+  humanURL: https://applications.icao.int/dataservices/default.aspx
+  tags:
+  - DOC8585
+  - Operator
+  - Reference Data
+  tags_raw:
+  - DOC8585
+  - Operators
+  - Reference Data
+  properties:
+  - type: Documentation
+    url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+- aid: icao:icao-airspace-api
+  name: ICAO Airspace API
+  description: >-
+    Endpoints providing airspace, navigation, and route data including flight information regions and
+    airspace structures relevant to international air navigation.
+  humanURL: https://applications.icao.int/dataservices/default.aspx
+  tags:
+  - Airspace
+  - Navigation
+  properties:
+  - type: Documentation
+    url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+- aid: icao:icao-occurrences-api
+  name: ICAO Occurrences API
+  description: >-
+    Endpoints providing access to aviation safety occurrence data, including accident and incident records
+    reported through ICAO's safety information systems.
+  humanURL: https://applications.icao.int/dataservices/default.aspx
+  tags:
+  - Accidents
+  - Incidents
+  - Safety
+  properties:
+  - type: Documentation
+    url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+- aid: icao:icao-aircraft-api
+  name: ICAO Aircraft API
+  description: >-
+    Endpoints providing aircraft reference data including DOC8643 aircraft type designators, manufacturer
+    information, and aircraft performance categories.
+  humanURL: https://applications.icao.int/dataservices/default.aspx
+  tags:
+  - Aircraft
+  - DOC8643
+  - Reference Data
+  properties:
+  - type: Documentation
+    url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+- aid: icao:icao-store-graphql
+  name: ICAO Store GraphQL API
+  description: >-
+    The GraphQL API behind the ICAO Store (store.icao.int), where ICAO sells publications and API Data
+    Service plans and booster packs. Anonymous introspection is open and returns a Magento (Adobe Commerce)
+    storefront schema with 57 query fields and 166 mutations covering catalog, cart, checkout and customer
+    accounts.
+  humanURL: https://store.icao.int/
+  baseURL: https://store.icao.int/graphql
+  tags:
+  - Commerce
+  - GraphQL
+  properties:
+  - type: GraphQL
+    url: graphql/icao-store-introspection.json
+- aid: icao:icao-geo-api
+  name: ICAO GEO API
+  description: The GEO API from ICAO — 1 operation(s) for geo.
+  humanURL: https://dataservices.icao.int/
+  baseURL: https://dataservices.icao.int/api
+  tags:
+  - GEO
+  properties:
+  - type: OpenAPI
+    url: openapi/icao-geo-api-openapi.yml
+  - type: Documentation
+    url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+  - type: Portal
+    url: https://applications.icao.int/dataservices/default.aspx
   - type: TermsOfService
-    url: https://www.icao.int/sites/default/files/Aviation-API-Data-Service/Documents/User-Terms-and-Condtions-for-ICAO-API-Data-Service-APIs-LEB_FINAL_13.04.21.pdf
-  - type: Support
-    url: https://www.icao.int/contact/
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+    url: >-
+      https://unitingaviation.com/wp-content/uploads/2021/09/User-Terms-and-Condtions-for-ICAO-API-Data-Service-APIs-LEB_FINAL_13.04.21.pdf
+- aid: icao:icao-icao-api
+  name: ICAO ICAO API
+  description: The ICAO API from ICAO — 8 operation(s) for icao.
+  humanURL: https://dataservices.icao.int/
+  baseURL: https://dataservices.icao.int/api
+  tags:
+  - ICAO
+  properties:
+  - type: OpenAPI
+    url: openapi/icao-icao-api-openapi.yml
+  - type: Documentation
+    url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+  - type: Portal
+    url: https://applications.icao.int/dataservices/default.aspx
+  - type: TermsOfService
+    url: >-
+      https://unitingaviation.com/wp-content/uploads/2021/09/User-Terms-and-Condtions-for-ICAO-API-Data-Service-APIs-LEB_FINAL_13.04.21.pdf
+- aid: icao:icao-infomation-api
+  name: ICAO Infomation API
+  description: The Infomation API from ICAO — 3 operation(s) for infomation.
+  humanURL: https://dataservices.icao.int/
+  baseURL: https://dataservices.icao.int/api
+  tags:
+  - Infomation
+  properties:
+  - type: OpenAPI
+    url: openapi/icao-infomation-api-openapi.yml
+  - type: Documentation
+    url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+  - type: Portal
+    url: https://applications.icao.int/dataservices/default.aspx
+  - type: TermsOfService
+    url: >-
+      https://unitingaviation.com/wp-content/uploads/2021/09/User-Terms-and-Condtions-for-ICAO-API-Data-Service-APIs-LEB_FINAL_13.04.21.pdf
+- aid: icao:icao-publication-api
+  name: ICAO Publication API
+  description: The Publication API from ICAO — 4 operation(s) for publication.
+  humanURL: https://dataservices.icao.int/
+  baseURL: https://dataservices.icao.int/api
+  tags:
+  - Publication
+  properties:
+  - type: OpenAPI
+    url: openapi/icao-publication-api-openapi.yml
+  - type: Documentation
+    url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+  - type: Portal
+    url: https://applications.icao.int/dataservices/default.aspx
+  - type: TermsOfService
+    url: >-
+      https://unitingaviation.com/wp-content/uploads/2021/09/User-Terms-and-Condtions-for-ICAO-API-Data-Service-APIs-LEB_FINAL_13.04.21.pdf
+- aid: icao:icao-safety-api
+  name: ICAO Safety API
+  description: The Safety API from ICAO — 2 operation(s) for safety.
+  humanURL: https://dataservices.icao.int/
+  baseURL: https://dataservices.icao.int/api
+  tags:
+  - Safety
+  properties:
+  - type: OpenAPI
+    url: openapi/icao-safety-api-openapi.yml
+  - type: Documentation
+    url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+  - type: Portal
+    url: https://applications.icao.int/dataservices/default.aspx
+  - type: TermsOfService
+    url: >-
+      https://unitingaviation.com/wp-content/uploads/2021/09/User-Terms-and-Condtions-for-ICAO-API-Data-Service-APIs-LEB_FINAL_13.04.21.pdf
+- aid: icao:icao-usoap-api
+  name: ICAO USOAP API
+  description: The USOAP API from ICAO — 3 operation(s) for usoap.
+  humanURL: https://dataservices.icao.int/
+  baseURL: https://dataservices.icao.int/api
+  tags:
+  - USOAP
+  properties:
+  - type: OpenAPI
+    url: openapi/icao-usoap-api-openapi.yml
+  - type: Documentation
+    url: https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx
+  - type: Portal
+    url: https://applications.icao.int/dataservices/default.aspx
+  - type: TermsOfService
+    url: >-
+      https://unitingaviation.com/wp-content/uploads/2021/09/User-Terms-and-Condtions-for-ICAO-API-Data-Service-APIs-LEB_FINAL_13.04.21.pdf
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v5

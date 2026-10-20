@@ -1,0 +1,101 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 5
+  other_domain: 1
+  platform: 1
+  roles:
+  - api
+  - legal
+  - other
+  - website
+hosts:
+- host: api.icao.int
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: icao.int
+  role: api
+  relation: own
+- host: applications.icao.int
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Portal
+  serves:
+  - docs
+  registrable_domain: icao.int
+  role: other
+  relation: own
+- host: dataservices.icao.int
+  found_by:
+  - pointer
+  - apis[]
+  types:
+  - Portal
+  serves:
+  - api
+  - docs
+  registrable_domain: icao.int
+  role: other
+  relation: own
+- host: store.icao.int
+  found_by:
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types: []
+  serves:
+  - api
+  - docs
+  - cdn
+  vendor: fastly
+  registrable_domain: icao.int
+  role: other
+  relation: own
+- host: unitingaviation.com
+  found_by:
+  - pointer
+  types:
+  - TermsOfService
+  serves: []
+  registrable_domain: unitingaviation.com
+  role: legal
+  relation: other-domain
+- host: www.icao.int
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Blog
+  - Website
+  - Documentation
+  - Support
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: icao.int
+  role: website
+  relation: own
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform

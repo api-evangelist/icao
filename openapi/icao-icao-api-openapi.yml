@@ -1,0 +1,277 @@
+openapi: 3.2.0
+info:
+  title: ICAO API
+  version: '1.0'
+  x-refined-note:
+  - x-source differs across the merged source definitions and was not carried
+  description: 'Operations tagged ICAO across 2 of this provider''s published API definitions: icao-api-services-openapi.json, icao-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: .
+- url: https://dataservices.icao.int/api
+  description: Resolved from the spec relative server "." as served at https://dataservices.icao.int/api/openapi
+tags:
+- name: ICAO
+paths:
+  /eisummary-stats:
+    get:
+      summary: Effective Implementation Statistics on SSP Foundation
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getEisummaryStats
+      x-operation-id-source: derived
+    servers:
+    - url: .
+  /iosa-registry-list:
+    get:
+      summary: IOSA Registered Airlines
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getIosaRegistryList
+      x-operation-id-source: derived
+    servers:
+    - url: .
+  /manufacturer-list:
+    get:
+      summary: Manufacturer List
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: manufacturer
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getManufacturerList
+      x-operation-id-source: derived
+    servers:
+    - url: .
+  /profile-stats:
+    get:
+      summary: Operator Risk Profile
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getProfileStats
+      x-operation-id-source: derived
+    servers:
+    - url: .
+  /safety-partner-stats:
+    get:
+      summary: Safety Partner Programs
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getSafetyPartnerStats
+      x-operation-id-source: derived
+    servers:
+    - url: .
+  /safety-margin-stats:
+    get:
+      summary: State Safety Margins
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getSafetyMarginStats
+      x-operation-id-source: derived
+    servers:
+    - url: .
+  /progress-stats:
+    get:
+      summary: USOAP Progress by State
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getProgressStats
+      x-operation-id-source: derived
+    servers:
+    - url: .
+  /progress-cert-stats:
+    get:
+      summary: USOAP Progress by State – Enhanced
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getProgressCertStats
+      x-operation-id-source: derived
+    servers:
+    - url: .
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass api key in URL query parameter.
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: api_key
+      description: Pass api key as Bearer token.
+x-refined-from:
+- icao-api-services-openapi.json
+- icao-openapi.yml

@@ -1,0 +1,153 @@
+openapi: 3.2.0
+info:
+  title: Icao Publication API
+  version: '1.0'
+  x-refined-note:
+  - x-source differs across the merged source definitions and was not carried
+  description: 'Operations tagged Publication across 2 of this provider''s published API definitions: icao-api-services-openapi.json, icao-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: .
+- url: https://dataservices.icao.int/api
+  description: Resolved from the spec relative server "." as served at https://dataservices.icao.int/api/openapi
+tags:
+- name: Publication
+paths:
+  /doc7910:
+    get:
+      summary: DOC7910 Location Indicators
+      tags:
+      - Publication
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: icaocode
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getDoc7910
+      x-operation-id-source: derived
+    servers:
+    - url: .
+  /doc8585:
+    get:
+      summary: DOC8585 Operator 3-letter Codes
+      tags:
+      - Publication
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: operatorcode
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getDoc8585
+      x-operation-id-source: derived
+    servers:
+    - url: .
+  /doc8643:
+    get:
+      summary: DOC8643 Aircraft Type Designators
+      tags:
+      - Publication
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: manufacturer
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getDoc8643
+      x-operation-id-source: derived
+    servers:
+    - url: .
+  /Manufacturer-list-uas:
+    get:
+      summary: Manufacturer List - Unmanned Aircraft Systems
+      tags:
+      - Publication
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: manufacturer_code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getManufacturerListUas
+      x-operation-id-source: derived
+    servers:
+    - url: .
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass api key in URL query parameter.
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: api_key
+      description: Pass api key as Bearer token.
+x-refined-from:
+- icao-api-services-openapi.json
+- icao-openapi.yml

@@ -1,0 +1,25 @@
+name: ICAO API Data Service conventions
+generated: '2026-10-20'
+method: searched
+source: https://dataservices.icao.int/api/openapi
+docs: https://dataservices.icao.int/api/demo?api=doc7910
+authentication:
+  style: API key passed as the api_key query parameter, or as a Bearer token (securitySchemes apiKeyAuth / bearerAuth in the published OpenAPI).
+  see: authentication/icao-authentication.yml
+formats:
+  parameter: format
+  values: [json, csv]
+pagination:
+  style: none documented
+idempotency:
+  coverage: na
+  note: All 21 published operations are GET; the API has no write surface.
+reversibility:
+  coverage: na
+  note: Read-only API; no write operations to reverse.
+dry_run_mode:
+  coverage: na
+versioning:
+  note: The published OpenAPI declares info.version 1.0; the portal brands the service "ICAO API Data Service 2.0". No versioning or deprecation policy is published.
+rate_limit_signaling:
+  note: Usage is metered as call quotas (free trial calls, Booster packs); no headers documented. See rate-limits/icao-rate-limits.yml.

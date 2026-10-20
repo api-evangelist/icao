@@ -1,0 +1,21 @@
+name: ICAO agent skills
+generated: '2026-10-20'
+method: generated
+skills:
+- name: icao-reference-data-lookup
+  path: skills/icao-reference-data-lookup.md
+  operations:
+  - getDoc7910
+  - getDoc8585
+  - getDoc8643
+  - getManufacturerList
+  - getManufacturerListUas
+- name: icao-state-safety-oversight
+  path: skills/icao-state-safety-oversight.md
+  operations:
+  - getIcaoMemberStates
+  - getEiStats
+  - getAggregatedEiTrendStats
+  - getUsoapActivityList
+  - getProgressStats
+  - getSafetyMarginStats

@@ -1,0 +1,40 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/icao-openapi.yml
+vocabulary:
+  name: ICAO Domain Vocabulary
+  description: 'Terms declared by ICAO''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions. Derived,
+    not authored.'
+  version: '2026-10-20'
+  terms:
+  - term: Publication
+    definition: 'Resource group in the contract; its operation GET /doc7910: DOC7910 Location Indicators'
+    tags:
+    - Resource Group
+    source: openapi/icao-openapi.yml
+  - term: Safety
+    definition: 'Resource group in the contract; its operation GET /accidents: Accidents'
+    tags:
+    - Resource Group
+    source: openapi/icao-openapi.yml
+  - term: ICAO
+    definition: 'Resource group in the contract; its operation GET /eisummary-stats: Effective Implementation Statistics on SSP Foundation'
+    tags:
+    - Resource Group
+    source: openapi/icao-openapi.yml
+  - term: Infomation
+    definition: 'Resource group in the contract; its operation GET /annex: ICAO Annexes'
+    tags:
+    - Resource Group
+    source: openapi/icao-openapi.yml
+  - term: GEO
+    definition: 'Resource group in the contract; its operation GET /fir-by-location: Locate FIR by Geographic Coordinates'
+    tags:
+    - Resource Group
+    source: openapi/icao-openapi.yml
+  - term: USOAP
+    definition: 'Resource group in the contract; its operation GET /usoap-activity-list: USOAP Activities by State over time'
+    tags:
+    - Resource Group
+    source: openapi/icao-openapi.yml

@@ -1,0 +1,656 @@
+# x-archived-from: icao-openapi.yml
+# x-archived-on: 2026-10-20
+openapi: 3.0.0
+info:
+  title: API Services
+  version: '1.0'
+  x-source: https://dataservices.icao.int/api/openapi
+servers:
+- url: https://dataservices.icao.int/api
+  description: Resolved from the spec relative server "." as served at https://dataservices.icao.int/api/openapi
+paths:
+  /doc7910:
+    get:
+      summary: DOC7910 Location Indicators
+      tags:
+      - Publication
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: icaocode
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getDoc7910
+  /doc8585:
+    get:
+      summary: DOC8585 Operator 3-letter Codes
+      tags:
+      - Publication
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: operatorcode
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getDoc8585
+  /doc8643:
+    get:
+      summary: DOC8643 Aircraft Type Designators
+      tags:
+      - Publication
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: manufacturer
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getDoc8643
+  /accidents:
+    get:
+      summary: Accidents
+      tags:
+      - Safety
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: StateOfOccurrence
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: StateOfOperator
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: StateOfRegistry
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: year
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getAccidents
+  /eisummary-stats:
+    get:
+      summary: Effective Implementation Statistics on SSP Foundation
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getEisummaryStats
+  /annex:
+    get:
+      summary: ICAO Annexes
+      tags:
+      - Infomation
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: annex
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: language
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getAnnex
+  /icao-member-states:
+    get:
+      summary: ICAO Member States
+      tags:
+      - Infomation
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: RegionalOffice
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getIcaoMemberStates
+  /incidents:
+    get:
+      summary: Incidents
+      tags:
+      - Safety
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: StateOfOccurrence
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: StateOfOperator
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: StateOfRegistry
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: year
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getIncidents
+  /iosa-registry-list:
+    get:
+      summary: IOSA Registered Airlines
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getIosaRegistryList
+  /fir-by-location:
+    get:
+      summary: Locate FIR by Geographic Coordinates
+      tags:
+      - GEO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: lat
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: lng
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getFirByLocation
+  /manufacturer-list:
+    get:
+      summary: Manufacturer List
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: manufacturer
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getManufacturerList
+  /Manufacturer-list-uas:
+    get:
+      summary: Manufacturer List - Unmanned Aircraft Systems
+      tags:
+      - Publication
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: manufacturer_code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getManufacturerListUas
+  /profile-stats:
+    get:
+      summary: Operator Risk Profile
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getProfileStats
+  /safety-partner-stats:
+    get:
+      summary: Safety Partner Programs
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getSafetyPartnerStats
+  /registration-states:
+    get:
+      summary: State of Registries
+      tags:
+      - Infomation
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getRegistrationStates
+  /safety-margin-stats:
+    get:
+      summary: State Safety Margins
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getSafetyMarginStats
+  /usoap-activity-list:
+    get:
+      summary: USOAP Activities by State over time
+      tags:
+      - USOAP
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getUsoapActivityList
+  /ei-stats:
+    get:
+      summary: USOAP EI by State
+      tags:
+      - USOAP
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getEiStats
+  /aggregated-ei-trend-stats:
+    get:
+      summary: USOAP EI By State By Year
+      tags:
+      - USOAP
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: stateISO3Code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getAggregatedEiTrendStats
+  /progress-stats:
+    get:
+      summary: USOAP Progress by State
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getProgressStats
+  /progress-cert-stats:
+    get:
+      summary: USOAP Progress by State – Enhanced
+      tags:
+      - ICAO
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getProgressCertStats
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass api key in URL query parameter.
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: api_key
+      description: Pass api key as Bearer token.

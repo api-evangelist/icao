@@ -1,0 +1,45 @@
+{
+  "provider": "icao",
+  "sources": [
+    "_original/icao-api-services-openapi.json",
+    "icao-openapi.yml"
+  ],
+  "outputs": [
+    "icao-geo-api-openapi.yml",
+    "icao-icao-api-openapi.yml",
+    "icao-infomation-api-openapi.yml",
+    "icao-publication-api-openapi.yml",
+    "icao-safety-api-openapi.yml",
+    "icao-usoap-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/icao-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "icao-api-services-openapi.json: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "icao-api-services-openapi.json: declared missing tag: GEO",
+    "icao-api-services-openapi.json: declared missing tag: ICAO",
+    "icao-api-services-openapi.json: declared missing tag: Infomation",
+    "icao-api-services-openapi.json: declared missing tag: Publication",
+    "icao-api-services-openapi.json: declared missing tag: Safety",
+    "icao-api-services-openapi.json: declared missing tag: USOAP",
+    "icao-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "icao-openapi.yml: declared missing tag: GEO",
+    "icao-openapi.yml: declared missing tag: ICAO",
+    "icao-openapi.yml: declared missing tag: Infomation",
+    "icao-openapi.yml: declared missing tag: Publication",
+    "icao-openapi.yml: declared missing tag: Safety",
+    "icao-openapi.yml: declared missing tag: USOAP",
+    "tag 'GEO' spans 2 source specs (icao-api-services-openapi.json, icao-openapi.yml): per-path servers applied",
+    "tag 'ICAO' spans 2 source specs (icao-api-services-openapi.json, icao-openapi.yml): per-path servers applied",
+    "tag 'Infomation' spans 2 source specs (icao-api-services-openapi.json, icao-openapi.yml): per-path servers applied",
+    "tag 'Publication' spans 2 source specs (icao-api-services-openapi.json, icao-openapi.yml): per-path servers applied",
+    "tag 'Safety' spans 2 source specs (icao-api-services-openapi.json, icao-openapi.yml): per-path servers applied",
+    "tag 'USOAP' spans 2 source specs (icao-api-services-openapi.json, icao-openapi.yml): per-path servers applied",
+    "apis.yml register: written (+6 apis, 13 total)"
+  ],
+  "skipped": []
+}

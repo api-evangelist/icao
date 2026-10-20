@@ -1,0 +1,132 @@
+openapi: 3.2.0
+info:
+  title: Icao Infomation API
+  version: '1.0'
+  x-refined-note:
+  - x-source differs across the merged source definitions and was not carried
+  description: 'Operations tagged Infomation across 2 of this provider''s published API definitions: icao-api-services-openapi.json, icao-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: .
+- url: https://dataservices.icao.int/api
+  description: Resolved from the spec relative server "." as served at https://dataservices.icao.int/api/openapi
+tags:
+- name: Infomation
+paths:
+  /annex:
+    get:
+      summary: ICAO Annexes
+      tags:
+      - Infomation
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: annex
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: language
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getAnnex
+      x-operation-id-source: derived
+    servers:
+    - url: .
+  /icao-member-states:
+    get:
+      summary: ICAO Member States
+      tags:
+      - Infomation
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: RegionalOffice
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getIcaoMemberStates
+      x-operation-id-source: derived
+    servers:
+    - url: .
+  /registration-states:
+    get:
+      summary: State of Registries
+      tags:
+      - Infomation
+      security:
+      - apiKeyAuth: []
+      - bearerAuth: []
+      parameters:
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - csv
+          default: json
+        description: Response format. Default is json.
+      - name: iso3code
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      operationId: getRegistrationStates
+      x-operation-id-source: derived
+    servers:
+    - url: .
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass api key in URL query parameter.
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: api_key
+      description: Pass api key as Bearer token.
+x-refined-from:
+- icao-api-services-openapi.json
+- icao-openapi.yml

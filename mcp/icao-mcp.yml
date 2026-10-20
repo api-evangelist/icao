@@ -1,0 +1,119 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/icao-openapi.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: No MCP server was found. The pre-flight posted tools/list to /mcp on api.icao.int, applications.icao.int, www.icao.int, store.icao.int;
+  verdict absent. Candidate tools below are derived from the 21 operation(s) in the provider's own OpenAPI (21 listed); they describe what a server
+  WOULD expose, not one that exists.
+tools:
+- name: get_doc7910
+  operationId: getDoc7910
+  method: GET
+  path: /doc7910
+  description: DOC7910 Location Indicators
+- name: get_doc8585
+  operationId: getDoc8585
+  method: GET
+  path: /doc8585
+  description: DOC8585 Operator 3-letter Codes
+- name: get_doc8643
+  operationId: getDoc8643
+  method: GET
+  path: /doc8643
+  description: DOC8643 Aircraft Type Designators
+- name: get_accidents
+  operationId: getAccidents
+  method: GET
+  path: /accidents
+  description: Accidents
+- name: get_eisummary_stats
+  operationId: getEisummaryStats
+  method: GET
+  path: /eisummary-stats
+  description: Effective Implementation Statistics on SSP Foundation
+- name: get_annex
+  operationId: getAnnex
+  method: GET
+  path: /annex
+  description: ICAO Annexes
+- name: get_icao_member_states
+  operationId: getIcaoMemberStates
+  method: GET
+  path: /icao-member-states
+  description: ICAO Member States
+- name: get_incidents
+  operationId: getIncidents
+  method: GET
+  path: /incidents
+  description: Incidents
+- name: get_iosa_registry_list
+  operationId: getIosaRegistryList
+  method: GET
+  path: /iosa-registry-list
+  description: IOSA Registered Airlines
+- name: get_fir_by_location
+  operationId: getFirByLocation
+  method: GET
+  path: /fir-by-location
+  description: Locate FIR by Geographic Coordinates
+- name: get_manufacturer_list
+  operationId: getManufacturerList
+  method: GET
+  path: /manufacturer-list
+  description: Manufacturer List
+- name: get_manufacturer_list_uas
+  operationId: getManufacturerListUas
+  method: GET
+  path: /Manufacturer-list-uas
+  description: Manufacturer List - Unmanned Aircraft Systems
+- name: get_profile_stats
+  operationId: getProfileStats
+  method: GET
+  path: /profile-stats
+  description: Operator Risk Profile
+- name: get_safety_partner_stats
+  operationId: getSafetyPartnerStats
+  method: GET
+  path: /safety-partner-stats
+  description: Safety Partner Programs
+- name: get_registration_states
+  operationId: getRegistrationStates
+  method: GET
+  path: /registration-states
+  description: State of Registries
+- name: get_safety_margin_stats
+  operationId: getSafetyMarginStats
+  method: GET
+  path: /safety-margin-stats
+  description: State Safety Margins
+- name: get_usoap_activity_list
+  operationId: getUsoapActivityList
+  method: GET
+  path: /usoap-activity-list
+  description: USOAP Activities by State over time
+- name: get_ei_stats
+  operationId: getEiStats
+  method: GET
+  path: /ei-stats
+  description: USOAP EI by State
+- name: get_aggregated_ei_trend_stats
+  operationId: getAggregatedEiTrendStats
+  method: GET
+  path: /aggregated-ei-trend-stats
+  description: USOAP EI By State By Year
+- name: get_progress_stats
+  operationId: getProgressStats
+  method: GET
+  path: /progress-stats
+  description: USOAP Progress by State
+- name: get_progress_cert_stats
+  operationId: getProgressCertStats
+  method: GET
+  path: /progress-cert-stats
+  description: USOAP Progress by State – Enhanced
