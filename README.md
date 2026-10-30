@@ -1,4 +1,4 @@
-# ICAO (icao)
+# ICAO
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,93 +66,128 @@
 
 The International Civil Aviation Organization (ICAO) is a specialized agency of the United Nations that codifies the principles and techniques of international air navigation and fosters the planning and development of international air transport. ICAO's API Data Service provides 50+ continuously updated APIs covering states, airports, operators, airspace, occurrences, and aircraft, including official reference datasets such as DOC7910 location indicators, DOC8585 operator three-letter codes, and DOC8643 aircraft type designators.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/icao/refs/heads/main/apis.yml)
+**Areas:** Airlines · Airports · Airspace · Aviation · Reference Data · Standards · United Nations
 
-## Scope
+## ICAO on APIs.io
 
-- **Type:** Index
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for ICAO is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/icao/](https://apis.io/providers/icao/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### APIs (13)
 
- - Airlines, Airports, Airspace, Aviation, Reference Data, Standards, United Nations
+- [ICAO States API](https://apis.io/apis/icao/icao-states-api/) — Endpoints providing reference and statistical data on ICAO Member States, including state-level aviation activity, agreements, and contracting state metadata.
+- [ICAO Airports API](https://apis.io/apis/icao/icao-airports-api/) — Endpoints exposing ICAO airport reference data including DOC7910 location indicators, airport metadata, and related aerodrome information.
+- [ICAO Operators API](https://apis.io/apis/icao/icao-operators-api/) — Endpoints providing operator reference data including DOC8585 three-letter operator designators, telephony, and operator details for airlines and aircraft…
+- [ICAO Airspace API](https://apis.io/apis/icao/icao-airspace-api/) — Endpoints providing airspace, navigation, and route data including flight information regions and airspace structures relevant to international air navigation.
+- [ICAO Occurrences API](https://apis.io/apis/icao/icao-occurrences-api/) — Endpoints providing access to aviation safety occurrence data, including accident and incident records reported through ICAO's safety information systems.
+- [ICAO Aircraft API](https://apis.io/apis/icao/icao-aircraft-api/) — Endpoints providing aircraft reference data including DOC8643 aircraft type designators, manufacturer information, and aircraft performance categories.
+- [ICAO Store GraphQL API](https://apis.io/apis/icao/icao-store-graphql/) — The GraphQL API behind the ICAO Store (store.icao.int), where ICAO sells publications and API Data Service plans and booster packs. Anonymous introspection…
+- [ICAO GEO API](https://apis.io/apis/icao/icao-geo-api/) — The GEO API from ICAO — 1 operation(s) for geo.
+- [ICAO ICAO API](https://apis.io/apis/icao/icao-icao-api/) — The ICAO API from ICAO — 8 operation(s) for icao.
+- [ICAO Infomation API](https://apis.io/apis/icao/icao-infomation-api/) — The Infomation API from ICAO — 3 operation(s) for infomation.
+- [ICAO Publication API](https://apis.io/apis/icao/icao-publication-api/) — The Publication API from ICAO — 4 operation(s) for publication.
+- [ICAO Safety API](https://apis.io/apis/icao/icao-safety-api/) — The Safety API from ICAO — 2 operation(s) for safety.
+- [ICAO USOAP API](https://apis.io/apis/icao/icao-usoap-api/) — The USOAP API from ICAO — 3 operation(s) for usoap.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### ICAO API Data Service
-The ICAO API Data Service provides programmatic access to authoritative civil aviation data published by ICAO, with continuously updated endpoints across six data areas. An API key is required and responses are available in CSV and JSON formats; pricing tiers include booster packs, full data-set packages, and unlimited-call subscriptions.
+Which operations an agent can call, which act, and which need a human in the loop.
 
-**Human URL:** [https://applications.icao.int/dataservices/default.aspx](https://applications.icao.int/dataservices/default.aspx)
+- [Icao Agentic Access](https://apis.io/agentic-access/icao/icao-agentic-access/)
 
-#### Tags:
+#### Governance rules (1)
 
- - Aviation Data, Reference Data
+Spectral rulesets for the provider's contracts.
 
-#### Properties
+- [ICAO API Rules](https://apis.io/rules/icao/icao-rules/)
 
-- [Documentation](https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx)
-- [Portal](https://applications.icao.int/dataservices/default.aspx)
-- [Samples](https://applications.icao.int/dataservices/api-data-samples)
+#### Security (2)
 
-### ICAO States API
-Endpoints providing reference and statistical data on ICAO Member States, including state-level aviation activity, agreements, and contracting state metadata.
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags:
+- [Icao Authentication](https://apis.io/security/icao/icao-authentication/)
+- [Icao Domain Security](https://apis.io/security/icao/icao-domain-security/)
 
- - States, Reference Data
+#### Plans and pricing (1)
 
-### ICAO Airports API
-Endpoints exposing ICAO airport reference data including DOC7910 location indicators, airport metadata, and related aerodrome information.
+Published plans, tiers and prices.
 
-#### Tags:
+- [Icao Plans Pricing](https://apis.io/plans/icao/icao-plans-pricing/)
 
- - Airports, DOC7910, Reference Data
+#### Rate limits (1)
 
-### ICAO Operators API
-Endpoints providing operator reference data including DOC8585 three-letter operator designators, telephony, and operator details for airlines and aircraft operators.
+Published request limits.
 
-#### Tags:
+- [Icao Rate Limits](https://apis.io/rate-limits/icao/icao-rate-limits/)
 
- - DOC8585, Operators, Reference Data
+#### FinOps (1)
 
-### ICAO Airspace API
-Endpoints providing airspace, navigation, and route data including flight information regions and airspace structures relevant to international air navigation.
+What the API costs to run, by operation.
 
-#### Tags:
+- [Icao Finops](https://apis.io/finops/icao/icao-finops/)
 
- - Airspace, Navigation
+## Where to find this API
 
-### ICAO Occurrences API
-Endpoints providing access to aviation safety occurrence data, including accident and incident records reported through ICAO's safety information systems.
-
-#### Tags:
-
- - Accidents, Incidents, Safety
-
-### ICAO Aircraft API
-Endpoints providing aircraft reference data including DOC8643 aircraft type designators, manufacturer information, and aircraft performance categories.
-
-#### Tags:
-
- - Aircraft, DOC8643, Reference Data
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.icao.int/)
-- [Portal](https://applications.icao.int/dataservices/default.aspx)
 - [Documentation](https://www.icao.int/safety/iStars/Pages/API-Data-Service.aspx)
-- [Samples](https://applications.icao.int/dataservices/api-data-samples)
-- [Pricing](https://store.icao.int/en/aviation-api-data-service)
 - [Support](https://www.icao.int/contact/)
+- [Blog](https://www.icao.int/news)
+- [Terms of service](https://unitingaviation.com/wp-content/uploads/2021/09/User-Terms-and-Condtions-for-ICAO-API-Data-Service-APIs-LEB_FINAL_13.04.21.pdf)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 38.0** — thin · rubric 0.24.0 · scored 2026-10-20
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 36.7 |
+| Contract governance | 79.1 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 44.5 |
+| Access clarity | 15.8 |
+
+**Agent readiness 33.7** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | unknown |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | unknown |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 20.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/icao/](https://apis.io/providers/icao/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ICAO: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/icao/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
