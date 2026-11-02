@@ -1,0 +1,49 @@
+name: ICAO pricing
+provider: ICAO
+providerId: icao
+generated: '2026-10-20'
+method: searched
+source: https://store.icao.int/en/icao-api-service-plans-booster-pack-for-2k-calls
+audience: developer-api
+pricing_basis: usage-other
+published: true
+delivery:
+  model: managed
+note: The API Data Service portal (https://dataservices.icao.int/) offers free trial calls with an API key and sells Booster packs on the ICAO Store; the only Booster pack linked from the portal is the 2K-call pack. Full data-set download and enterprise access go through icaoapi@icao.int. The former pricing page store.icao.int/en/aviation-api-data-service now returns 404.
+plans:
+  - name: Free Trial
+    description: Enter a valid API key to use free trial calls (call count not stated on the portal).
+    price_text: Start Free Trial
+    source: https://dataservices.icao.int/
+    features:
+      - Free trial calls with a registered API key
+    limits: []
+  - name: ICAO API Service Plans - Booster Pack for 2K Calls
+    description: Each Boosterpack comes with a valid Authorization code to unlock API calls via a valid API key. You can use the calls across all available APIs.
+    price: 550.00
+    currency: USD
+    price_text: USD 550.00
+    features:
+      - Calls usable across all available APIs
+      - Notification before reaching the calls limit
+    limits:
+      - limit_text: 2k Calls
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - subscription
+  units: []
+  plans:
+  - name: Free Trial
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: ICAO API Service Plans - Booster Pack for 2K Calls
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
